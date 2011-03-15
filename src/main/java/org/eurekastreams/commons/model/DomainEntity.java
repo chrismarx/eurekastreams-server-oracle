@@ -28,6 +28,9 @@ import net.sf.gilead.pojo.java5.LightEntity;
 /**
  * The parent class for all domain entities. Contains the unique id key and
  * version property.
+ * 
+ * TODO oracle couldn't use the default sequence generation/lookup of "IDENTITY", had
+ *  to change this to use a sequencegenerator based on the table name
  */
 @MappedSuperclass
 public abstract class DomainEntity extends LightEntity

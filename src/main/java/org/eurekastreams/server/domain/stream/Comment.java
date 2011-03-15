@@ -34,7 +34,7 @@ import org.hibernate.validator.Length;
 
 /**
  * Entity representing a comment on an Activity.
- * 
+ * TODO comment is an oracle reserved word, keeping it as lowercase "comment" was a pain
  */
 @Entity
 @Table(name = "COMMENT1")

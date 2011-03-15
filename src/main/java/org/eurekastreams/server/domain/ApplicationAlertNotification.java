@@ -40,6 +40,7 @@ import org.eurekastreams.server.domain.stream.BaseObjectType;
 
 /**
  * A notification for display within the application on the alert pull-down.
+ * TODO the auto generated seq for this object was too long, had to use a custom sequence
  */
 @Entity
 public class ApplicationAlertNotification extends DomainEntity implements Serializable
