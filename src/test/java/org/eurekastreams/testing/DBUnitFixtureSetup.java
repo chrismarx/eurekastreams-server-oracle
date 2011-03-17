@@ -41,6 +41,8 @@ import org.springframework.jdbc.datasource.DataSourceUtils;
  * Note: This is very specific to our configuration - it's loading all Spring files found in
  * "classpath:applicationContext*-test.xml", and looking for the bean named "dataSource". This is no more hard-coded
  * than annotations in our tests, and does make our setUp methods much easier to manage.
+ * 
+ * TODO had to change dbunit settings, not sure if this can be made generic
  */
 public final class DBUnitFixtureSetup
 {

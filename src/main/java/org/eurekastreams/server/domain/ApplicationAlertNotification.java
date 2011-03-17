@@ -25,15 +25,11 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Version;
 
 import org.eurekastreams.commons.model.DomainEntity;
 import org.eurekastreams.server.domain.stream.BaseObjectType;
@@ -43,34 +39,13 @@ import org.eurekastreams.server.domain.stream.BaseObjectType;
  * TODO the auto generated seq for this object was too long, had to use a custom sequence
  */
 @Entity
+@Table(name="APPLALERTNOTIFICATION")
 public class ApplicationAlertNotification extends DomainEntity implements Serializable
 {
     /**
      * Version id.
      */
     private static final long serialVersionUID = 3541861784436836240L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="seq")
-    @SequenceGenerator(name="seq", sequenceName="APPLICATIONALERTNOTIFICATIONID")
-    private long id;
-    
-    
-    /**
-	 * @return the id
-	 */
-    @Override
-	public long getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-    @Override
-	public void setId(long id) {
-		this.id = id;
-	}
 
 	/**
      * Person to receive the notification.

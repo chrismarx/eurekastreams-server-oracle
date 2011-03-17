@@ -1,0 +1,7 @@
+Note: You will need to override the applicationContext-model-test.xml and feedReaderContext-model-test.xml with the right properties for your datasource
+and hibernate config. I will commit these separately, with db credentials removed.
+
+Also, to run these tests using the orale context, they need to be initiated from the oracle extension project. There are two files in the
+org.eurekastreams.server package. ClassPathTests provides a way to run all tests in a particular package/path/etc anywhere in the classpath, and 
+SingleFileOnClassPathTest enables you to run just a single test. Running the tests without these runners in the eurekastreams-server-oracle application
+will make the test run in its default context (no oracle, default db, etc).

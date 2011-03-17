@@ -26,23 +26,25 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.persistence.Version;
 
 import org.eurekastreams.commons.model.DomainEntity;
 
 /**
  * Represents a kind of notification that a user wishes not to see via a given transport.
- * TODO the auto generated seq for this object was too long, had to use a custom sequence
+ * NOTE: this name of this table was shortened
  */
 @Entity
+@Table(name="NOTIFFILTERPREFERENCE")
 public class NotificationFilterPreference
 {
     /** Version. */
     private static final long serialVersionUID = 7192155314637780614L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="seq")
-    @SequenceGenerator(name="seq", sequenceName="NOTIFICATIONFILTERPREFERENCEID")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator="table_name_seq_gen")
+    @SequenceGenerator(name="table_name_seq_gen")
     private long id;
     
     /**
