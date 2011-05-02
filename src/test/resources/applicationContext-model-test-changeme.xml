@@ -6,7 +6,8 @@
       http://www.springframework.org/schema/tx
       http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-		<!-- CHANGEME -- make a local copy of this file, remove the '-changeme' from the file name
+
+		<!-- CHANGEME make a local copy of this file, remove the 'changeme' from the file name
 			add db specific info here -->
 	    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="oracle.jdbc.pool.OracleConnectionPoolDataSource" />
