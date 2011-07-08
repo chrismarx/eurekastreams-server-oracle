@@ -27,7 +27,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:applicationContext*-test.xml" })
+@ContextConfiguration(locations = { "classpath:applicationContext-mappers-test.xml", "classpath:applicationContext-model-oracle-test.xml", "classpath:applicationContext-search-test.xml" })
 public class AppDataTest
 {
 

@@ -30,7 +30,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Parent class for JPA Domain Entity mappers.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:applicationContext*-test.xml" })
+@ContextConfiguration(locations = { "classpath:applicationContext-mappers-test.xml", "classpath:applicationContext-model-oracle-test.xml", "classpath:applicationContext-search-test.xml" })
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
 public abstract class DomainEntityMapperTest

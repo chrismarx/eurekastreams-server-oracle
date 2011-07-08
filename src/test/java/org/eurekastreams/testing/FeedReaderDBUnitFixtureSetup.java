@@ -58,7 +58,7 @@ public final class FeedReaderDBUnitFixtureSetup
      * Locations of the application context files to load for finding the data
      * source.
      */
-    private static final String[] APPLICATION_CONTEXT_LOCATIONS = { "classpath*:feedReaderContext*-test.xml" };
+    private static final String[] APPLICATION_CONTEXT_LOCATIONS = { "classpath:feedReaderContext-mappers-test.xml" , "classpath:feedReaderContext-model-oracle-test.xml" };
 
     /**
      * Name of the data source bean in the Spring config.

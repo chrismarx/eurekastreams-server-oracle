@@ -31,7 +31,7 @@ import org.springframework.transaction.annotation.Transactional;
  * TODO specified custom oracle dataset, set that file for changes
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:applicationContext*-test.xml" })
+@ContextConfiguration(locations = { "classpath:applicationContext-mappers-test.xml", "classpath:applicationContext-model-oracle-test.xml", "classpath:applicationContext-search-test.xml" })
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
 public abstract class MapperTest
@@ -66,6 +66,8 @@ public abstract class MapperTest
     /**
      * Load the DBUnit XML for the all tests in this suite. Override this in the subclass if you want it to load a
      * different dataset file.
+     * 
+     * TODO: get this error when dataset is not at parent root - http://www.manning-sandbox.com/thread.jspa?threadID=15326
      * 
      * @throws Exception
      *             If error occurs during setup.

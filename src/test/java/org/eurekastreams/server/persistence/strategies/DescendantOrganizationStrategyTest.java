@@ -40,7 +40,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Test fixture for the DescendantOrganizationStrategy.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath*:applicationContext*-test.xml" })
+@ContextConfiguration(locations = { "classpath:applicationContext-mappers-test.xml", "classpath:applicationContext-model-oracle-test.xml", "classpath:applicationContext-search-test.xml" })
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
 public class DescendantOrganizationStrategyTest

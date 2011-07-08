@@ -23,8 +23,6 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Transient;
 import javax.persistence.Version;
 
-import net.sf.gilead.pojo.java5.LightEntity;
-
 /**
  * The parent class for all domain entities. Contains the unique id key and
  * version property.
@@ -33,7 +31,7 @@ import net.sf.gilead.pojo.java5.LightEntity;
  *  to change this to use a sequencegenerator based on the table name
  */
 @MappedSuperclass
-public abstract class DomainEntity extends LightEntity
+public abstract class DomainEntity extends WrappedLightEntity
 {
     /**
      * Serial version uid.
@@ -83,7 +81,7 @@ public abstract class DomainEntity extends LightEntity
      */
     protected void setVersion(final long newVersion)
     {
-        this.version = newVersion;
+        version = newVersion;
     }
 
     /**
@@ -106,7 +104,7 @@ public abstract class DomainEntity extends LightEntity
      */
     protected void setId(final long newId)
     {
-        this.id = newId;
+        id = newId;
     }
 
     /**
@@ -124,6 +122,6 @@ public abstract class DomainEntity extends LightEntity
                     this.getClass().getName().lastIndexOf('.') + 1)
                     + "#";
         }
-        return toStringBase + this.id;
+        return toStringBase + id;
     }
 }

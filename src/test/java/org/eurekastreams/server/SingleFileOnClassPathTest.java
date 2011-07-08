@@ -12,5 +12,5 @@ import org.junit.runner.RunWith;
  * Note: use @IncludeJars(true) if you don't have the eurekastreams-server project available locally
  */
 @RunWith(ClasspathSuite.class)
-@ClassnameFilters({"org.eurekastreams.server.persistence.mappers.db.RemoveGroupFollowersTest"})
+@ClassnameFilters({"org.eurekastreams.server.domain.ApplicationAlertNotificationTest"})
 public class SingleFileOnClassPathTest{}

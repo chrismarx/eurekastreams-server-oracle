@@ -140,6 +140,12 @@
 	<StreamScope id="8374533" scopeType="ORGANIZATION" uniqueKey="child1orgname" version="1" destinationEntityId="0" />
 	<StreamScope id="9374533" scopeType="ORGANIZATION" uniqueKey="child2orgname" version="1" destinationEntityId="0" />		
 	
+	<!-- Resource StreamScope -->
+	<StreamScope id="100" scopeType="RESOURCE" uniqueKey="resource1" version="1" destinationEntityId="0" />
+	
+	<StreamScope id="101" scopeType="RESOURCE" uniqueKey="http://foo.foo.com/foo.html" version="1" destinationEntityId="0" />
+	<StreamScope id="102" scopeType="RESOURCE" uniqueKey="http://foo.com/foo.html" version="1" destinationEntityId="0" />	
+	
 	<Organization id="5" version="1" description="Mission Statement"
 		name="Test Organization Name" allUsersCanCreateGroups="1"
 		shortName="tstorgname" url="http://www.TestOrganizationName.com"
@@ -244,11 +250,14 @@
 		authorEmail="vswatter@gmail.com" numberOfUsers="23"
 		created="2009-01-01 12:00:00.000" />
 
+ <Background id="1099" personId="99" version="1118" />
 	<Background id="1042" personId="42" version="1117" />
 	<BackgroundItem id="120" version="0" backgroundType="SKILL"
 		name="skill_1" />
 	<BackgroundItem id="121" version="0" backgroundType="SKILL"
-		name="skill_2" />
+        name="skill_2" />
+    <BackgroundItem id="999923" version="0" backgroundType="SKILL"
+        name="skill_2" />
 	<BackgroundItem id="122" version="0" backgroundType="SKILL"
 		name="skill_3" />
 	<BackgroundItem id="126" version="0" backgroundType="HONOR"
@@ -275,13 +284,23 @@
 	<BackgroundItem id="136" version="0" backgroundType="ACTIVITY_OR_SOCIETY"
 		name="activity_1" />
 
+    
+
 	<BackgroundItem id="4743" version="0" backgroundtype="INTEREST"
 		name="Earthlings" />
 	<Background_Interests Background_Id="1042"
-		interestIndex="0" BackgroundItem_Id="4743" />
+        interestIndex="0" BackgroundItem_Id="4743" />
+        
+    <!-- Ford Prefect skills: skill_1, skill_2 -->
+    <Background_Skills Background_Id="1042" skillsIndex="0" BackgroundItem_Id="120" />
+    <Background_Skills Background_Id="1042" skillsIndex="1" BackgroundItem_Id="121" />
+    
+    <!-- Monty Burns skills: skill_2, skill_3 -->    
+    <Background_Skills Background_Id="1099" skillsIndex="0" BackgroundItem_Id="999923" />
+    <Background_Skills Background_Id="1099" skillsIndex="1" BackgroundItem_Id="122" />
+        
+	<Organization_Capability OrganizationId="6" capabilityId="130" />
 
-	<Organization_Capability OrganizationId="6"
-		capabilityId="130" />
 
 	<Job id="2042" personId="42" version="1117" companyName="Example"
 		industry="Aerospace" title="Engineer" datefrom="2008-01-01 12:00:00.000"
@@ -372,8 +391,8 @@
         ownerId="4507" zoneNumber="2" zoneIndex="2" tabTemplateId="3253"
         deleted="0" dateDeleted="2009-01-01 12:00:00.000" minimized="0" />
                 
-    <NotifFilterPreference id="97" version="1" personId="42" notifierType="email" notificationCategory="FOLLOW_PERSON" />
-    <NotifFilterPreference id="98" version="1" personId="42" notifierType="email" notificationCategory="FOLLOW_GROUP" />
+    <NotifFilterPreference id="1" version="1" notifierType="email" notificationCategory="FOLLOW_PERSON" personId="42" />
+    <NotifFilterPreference id="2" version="1" notifierType="email" notificationCategory="FOLLOW_GROUP" personId="42" />
     
 	<!-- *********************************** -->
 	<!-- Carl Sagan - Tab Group with one tabs -->
@@ -412,7 +431,7 @@
 		commentable="1" streamPostable="1" accountlocked="0"
 		groupstreamhiddenlineindex="3" optOutVideoIds="5;"/>
 
-    <NotifFilterPreference id="99" version="1" personId="99" notifierType="email" notificationCategory="COMMENT" />
+    <NotifFilterPreference id="3" version="1" personId="99" notifierType="email" notificationCategory="COMMENT" />
 
 	<!--
 		SMithers has three related organizations including the parent
@@ -494,7 +513,7 @@
 		createdById="42" streamScopeId="874" commentable="1" streamPostable="1"
 		suppressPostNotifToMember="0" suppressPostNotifToCoordinator="0" />
 
-	<DomainGroup id="2" version="1" description="Group_20ion Statement"
+	<DomainGroup id="2" version="1" description="Group_2_Mission Statement"
 		updatesCount="5" name="D Group 1 Name" shortName="group2" publicgroup="1"
 		followersCount="1" parentOrganizationId="7" 
 		dateAdded="2009-01-01 05:54:54" isPending="0" 
@@ -545,13 +564,13 @@
 	
 
 	<!-- Smithers and Burns follow group 1 -->
-	<GroupFollower followerId="99" followingId="1" groupstreamindex="0" />
-	<GroupFollower followerId="98" followingId="1" groupstreamindex="0" />
+	<GroupFollower followerId="99" followingId="1" groupstreamindex="0" receiveNewActivityNotification="0" />
+	<GroupFollower followerId="98" followingId="1" groupstreamindex="0" receiveNewActivityNotification="0" />
 	
 	<!-- Fordp follows groups 1, 2, and 3 -->
-	<GroupFollower followerId="42" followingId="1" groupstreamindex="0" />
-	<GroupFollower followerId="42" followingId="2" groupstreamindex="1" />
-	<GroupFollower followerId="42" followingId="3" groupstreamindex="2" />
+	<GroupFollower followerId="42" followingId="1" groupstreamindex="0" receiveNewActivityNotification="1" />
+	<GroupFollower followerId="42" followingId="2" groupstreamindex="1" receiveNewActivityNotification="1" />
+	<GroupFollower followerId="42" followingId="3" groupstreamindex="2" receiveNewActivityNotification="1" />
 
 	<!-- Smithers and Ford are coordinators for Group 1 -->
 	<Group_Coordinators DomainGroup_id="1"
@@ -561,7 +580,7 @@
 
 
 	<!-- Sagan follows group 2 -->
-	<GroupFollower followerId="4507" followingId="2" groupstreamindex="0" />
+	<GroupFollower followerId="4507" followingId="2" groupstreamindex="0" receiveNewActivityNotification="1" />
 
 	<!-- FordP2 is a coordinator for group 2 -->
 	<Group_Coordinators DomainGroup_id="2"
@@ -588,32 +607,38 @@
 	<StreamItemId id="1009" version="1" />
 	<StreamItemId id="1010" version="1" />
 	<StreamItemId id="1011" version="1" />
+	   
+    <SharedResource id="5" version="1" uniqueKey="http://foo.com/foo.html" streamScopeId="101" />
+    <SharedResource id="6" version="1" uniqueKey="http://foo.foo.com/foo.html" streamScopeId="102" />
+    
+    <Person_LikedSharedResources personId="42" sharedResourceId="5" />
+    <Person_LikedSharedResources personId="99" sharedResourceId="5" />
 		
 	<Activity id="6789" version="1" actorId="smithers" actorType="PERSON" baseObject="" baseObjectType="NOTE" 
 		openSocialId="123" postedTime="2009-10-27 06:54:00" updated="2009-10-27 06:55:00"
 		verb="POST" recipientParentOrgId="7" streamScopeId="87433" isDestinationStreamPublic="1" originalActorId="smithers" 
-		originalActorType="PERSON" flagged="1" />
+		originalActorType="PERSON" flagged="1" showInStream="1"/>
 	
 	<Activity id="6790" version="1" actorId="smithers" actorType="PERSON" baseObject="" baseObjectType="NOTE"
 		openSocialId="456" postedTime="2009-10-27 06:55:00" updated="2009-10-27 06:56:00"
 		verb="POST" recipientParentOrgId="7" streamScopeId="87433" isDestinationStreamPublic="1" 
-		flagged="0" />
+		flagged="0" showInStream="1"/>
 		
     <Activity id="6791" version="1" actorId="fordp" actorType="PERSON" baseObject="" baseObjectType="NOTE"
         openSocialId="789" postedTime="2009-10-27 06:56:00" updated="2009-10-27 06:56:00"
         verb="POST" recipientParentOrgId="6" streamScopeId="2" isDestinationStreamPublic="1" originalActorId="smithers" 
-		originalActorType="PERSON" flagged="0" />
+		originalActorType="PERSON" flagged="0" showInStream="1"/>
     
     <Activity id="6792" version="1" actorId="fordp2" actorType="PERSON" baseObject="" baseObjectType="NOTE"
         openSocialId="012" postedTime="2009-10-27 06:57:00" updated="2009-10-27 06:56:00"
         verb="POST" recipientParentOrgId="5" streamScopeId="1" isDestinationStreamPublic="1" originalActorId="csagan" 
-		originalActorType="PERSON" flagged="0" />
+		originalActorType="PERSON" flagged="0" showInStream="1"/>
         
     <!-- smithers posts a note to group1 stream -->
     <Activity id="6793" version="1" actorId="smithers" actorType="PERSON" baseObject="" baseObjectType="NOTE"
         openSocialId="234" postedTime="2010-01-27 06:58:00" updated="2010-01-27 06:58:00"
         verb="POST" recipientParentOrgId="5" streamScopeId="874" isDestinationStreamPublic="1" originalActorId="smithers" 
-		originalActorType="PERSON" flagged="0" />
+		originalActorType="PERSON" flagged="0" showInStream="1"/>
 
 <!-- can't do this, as case sensitive means all table names needs to be capitalized, 
      and not case sensitive means everthing goes uppercase, and comment is "comment" in oracle db -->
@@ -804,6 +829,20 @@
     <TutorialVideo id="3" version="1" dialogtitle="Dialog Title 3" innercontent="Inner Content 3" 
        innercontenttitle="Inner Content Title 3" page="START" videoheight="600" videourl="http://google.com"
        videowidth="200" /> 
-	
-
+    
+    <DailyUsageSummary id="1" messagecount="5" pageviewcount="55" streamcontributorcount="555" 
+        streamviewcount="5555" streamviewercount="55555" uniquevisitorcount="555555" usagedate="2011-04-07" avgactivityresponsetime="5" 
+        isWeekday="1"
+        />
+        
+    <DailyUsageSummary id="2" messagecount="6" pageviewcount="66" streamcontributorcount="666" 
+        streamviewcount="6666" streamviewercount="66666" uniquevisitorcount="666666" usagedate="2011-04-08" avgactivityresponsetime="6" 
+        isWeekday="0"
+        />
+        
+    <DailyUsageSummary id="3" messagecount="7" pageviewcount="77" streamcontributorcount="777" 
+        streamviewcount="7777" streamviewercount="77777" uniquevisitorcount="777777" usagedate="2011-04-09" avgactivityresponsetime="7" 
+        isWeekday="1"
+        />
+    
 </dataset>

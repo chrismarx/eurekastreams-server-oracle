@@ -33,7 +33,8 @@ import org.eurekastreams.commons.model.DomainEntity;
 
 /**
  * Represents a kind of notification that a user wishes not to see via a given transport.
- * NOTE: this name of this table was shortened
+ * NOTE: this name of this table was shortened, it was easier to shorten the table name to 
+ * something that would support the programatic resolution of sequence name
  */
 @Entity
 @Table(name="NOTIFFILTERPREFERENCE")

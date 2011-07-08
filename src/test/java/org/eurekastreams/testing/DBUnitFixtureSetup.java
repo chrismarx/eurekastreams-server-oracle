@@ -51,8 +51,11 @@ public final class DBUnitFixtureSetup
 
     /**
      * Locations of the application context files to load for finding the data source.
+     * Note:Errors here or with the datasource probably indicate you're missing the test-jar build of the parent (eurekastreams-server)
      */
-    private static final String[] APPLICATION_CONTEXT_LOCATIONS = { "classpath:applicationContext-test.xml" };
+    private static final String[] APPLICATION_CONTEXT_LOCATIONS = {"classpath:applicationContext-mappers-test.xml",
+    																"classpath:applicationContext-model-oracle-test.xml",
+    																"classpath:applicationContext-search-test.xml"};
 
     /**
      * Name of the data source bean in the Spring config.
