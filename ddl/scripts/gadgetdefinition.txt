@@ -1,0 +1,5 @@
+21,0,"2009-08-17 00:00:00",http://localhost:8080/org/eurekastreams/gadgets/feed-reader.xml,d7a58391-5375-4c76-b5fc-a431c42a7666,3,,1,0,
+22,0,"2009-08-17 00:00:00",http://localhost:8080/org/eurekastreams/gadgets/activitygadget.xml,d7a58391-5375-4c76-b5fc-a431c42a7555,3,,0,0,
+24,0,"2010-01-13 00:00:00",http://localhost:8080/org/eurekastreams/gadgets/whitehouseblog-feed-reader.xml,06f98282-0083-11df-b82d-3a7356d89593,1,,1,0,
+25,0,"2010-01-13 00:00:00",http://localhost:8080/org/eurekastreams/gadgets/washtech-feed-reader.xml,0ba47620-0083-11df-8ff8-887356d89593,1,,1,0,
+26,0,"2010-04-30 00:00:00",http://localhost:8080/org/eurekastreams/gadgets/bookmarkgadget.xml,D9DA7754-5495-11DF-B12E-0806DFD72085,1,,1,0,

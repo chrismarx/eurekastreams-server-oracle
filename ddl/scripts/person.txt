@@ -1,0 +1,2 @@
+1,5,sysadmin,260,70,0,83117a55a7caa48ac4696a2f74d9bf73," ",,"2010-01-01 00:00:00",sysadmin@localhost,,Administrator,0,0,0,Administrator,,A,F95CE1FC-893D-11DF-B0FB-5F0BE0D72085," ",Administrator,,System Administrator,,1,6,,,0,3,"2011-05-01 16:13:44",6,1,1,0," ",3," ",
+2,6,yardmapadmin,,,,," ",,"2011-05-01 15:59:49",yardmap@gmail.com,,yard,0,0,0,map,,,," ",yard,,,,1,7,,,0,3,"2011-05-01 16:30:18",7,1,1,0," ",3," ",

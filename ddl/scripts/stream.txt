@@ -1,0 +1,4 @@
+1,,,0,Following,1,.\lobs\stream\stream.0
+2,,,0,EUREKA:PARENT_ORG_TAG,1,.\lobs\stream\stream.1
+3,,,0,Everyone,1,.\lobs\stream\stream.2
+4,,,0,My saved items,1,.\lobs\stream\stream.3

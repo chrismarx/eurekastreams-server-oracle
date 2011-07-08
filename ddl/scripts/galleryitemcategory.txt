@@ -1,0 +1,7 @@
+1,0,GADGET,News
+2,0,GADGET,Tools
+3,0,GADGET,Productivity
+4,0,THEME,Lockheed Martin
+5,0,THEME,Nature
+6,0,THEME,Abstract
+7,0,PLUGIN,Internet Services

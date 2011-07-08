@@ -1,0 +1,9 @@
+1,0,ALL,everyone,
+2,0,STARRED,starred,
+3,0,PERSONS_PARENT_ORGANIZATION,parentorg,
+4,0,PERSONS_FOLLOWED_STREAMS,follow,
+5,0,ORGANIZATION,rootorg,1
+6,0,PERSON,sysadmin,1
+7,0,PERSON,yardmapadmin,2
+8,1,RESOURCE,http://google.com,1
+9,1,RESOURCE,http://www.google.com,2
